@@ -4,9 +4,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        ConvertCheckNums ccn = new ConvertCheckNums();
-        int operation = ccn.checkOperations(s);
-        String[] nums = s.split(ccn.splitS[operation]);
+        int operation = ConvertCheckNums.checkOperations(s);
+        String[] nums = s.split(ConvertCheckNums.splitS[operation]);
         nums[0] = nums[0].trim();
         nums[1] =  nums[1].trim();
         if (ConvertCheckNums.checkNums(nums[0], nums[1])) {
@@ -15,7 +14,7 @@ public class Main {
             x = ConvertCheckNums.toArabic(nums[0]);
             y = ConvertCheckNums.toArabic(nums[1]);
             if (ConvertCheckNums.arithmOperations[operation] == "-" && x <= y) {
-                throw new Exception("В римских числах нет ноля и отрицательных чисел");
+                throw new Exception("В римских числах нет нуля и отрицательных чисел");
             } else if (ConvertCheckNums.arithmOperations[operation] == "/" && x < y) {
                 throw new Exception("Делитель больше делимого");
             } else {

@@ -79,9 +79,9 @@ public class ConvertCheckNums {
         }
 
         if (count == 1) {
-            throw new Exception("Вводите числа корректного формата");
+            throw new Exception("Введите числа корректного формата");
         } else if (x < 1 || x > 10 || y < 1 || y > 10) {
-            throw new Exception("Вводите числа от 1 до 10 включительно");
+            throw new Exception("Введите числа от 1 до 10 включительно");
         } else {
             if (count == 0) {
                 return true;
