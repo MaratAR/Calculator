@@ -15,7 +15,7 @@ public class Main {
             x = ConvertCheckNums.toArabic(nums[0]);
             y = ConvertCheckNums.toArabic(nums[1]);
             if (ConvertCheckNums.arithmOperations[operation] == "-" && x <= y) {
-                throw new Exception("В римских числах нет нуля и отрицательных чисел");
+                throw new Exception("В римских числах нет ноля и отрицательных чисел");
             } else if (ConvertCheckNums.arithmOperations[operation] == "/" && x < y) {
                 throw new Exception("Делитель больше делимого");
             } else {
